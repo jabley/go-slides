@@ -1,0 +1,26 @@
+Channels
+Concurrency in go
+4 Jul 2014
+Tags: channels, concurrency, mutex, signals
+
+James Abley
+Technical Architect, Government Digital Service
+james.abley@digital.cabinet-office.gov.uk
+https://www.gov.uk/
+@jabley
+
+* Basics
+
+.play -edit -numbers channels/basics.go /START OMIT/,/END OMIT/
+
+* Wait for completion
+
+.play -edit -numbers channels/completion.go /START OMIT/,/END OMIT/
+
+* Coordination
+
+.play -edit -numbers channels/coordination.go /START OMIT/,/END OMIT/
+
+* Termination
+
+.play -edit -numbers channels/terminate-workers.go /START OMIT/,/END OMIT/
