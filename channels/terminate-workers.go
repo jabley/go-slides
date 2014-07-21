@@ -6,7 +6,7 @@ import (
 )
 
 // START OMIT
-func worker(quit chan bool, result chan int) {
+func worker(quit <-chan struct{}, result chan<- int) {
 	for {
 		select {
 		case result <- rand.Intn(10000000):
@@ -17,7 +17,7 @@ func worker(quit chan bool, result chan int) {
 }
 
 func main() {
-	quit, result := make(chan bool), make(chan int)
+	quit, result := make(chan struct{}), make(chan int)
 	for i := 0; i < 100; i++ {
 		go worker(quit, result)
 	}
